@@ -3,17 +3,29 @@
 
 import profilePic from "./assets/profile.png";
 import sImage from "./assets/s.JPG";
+import aquilaLogo from "./assets/a.png";
 
 const PROJECTS = [
   {
     title: "Sign AI (mobile)",
-    desc: "Front-End en React Native / Expo para traduccion de lenguaje de señas.",
-    stack: ["React Native", "Expo", "Mobile FE"],
+    desc: "UI en React Native / Expo para práctica de lenguaje de señas.",
+    stack: ["React Native", "Expo", "Mobile UI"],
   },
   {
-    title: "Gestor de tareas ORT",
-    desc: "App web rápida para organizar materias y entregas.",
-    stack: ["React", "JS"],
+    title: "Co-founder de Soluciones Áquila",
+    desc: (
+      <>
+        Proyecto/emprendimiento tecnológico que fundamos con{" "}
+        <strong>Benjamín Piccagli, Federico Díaz Nemeth, Borja Izurieta</strong> y{" "}
+        <strong>Maximiliano Setton</strong>. La idea es usar software y productos
+        digitales para resolver problemas reales de la gente con soluciones
+        simples, útiles y escalables.
+        <div className="aquila-logo">
+          <img src={aquilaLogo} alt="Logo Soluciones Áquila" />
+        </div>
+      </>
+    ),
+    stack: ["Emprendimiento", "Equipo", "Producto"],
   },
   {
     title: "Simulador inventario",
@@ -54,7 +66,7 @@ function App() {
               <strong>creatividad</strong>. <br />
               Me apasiona entender cómo funcionan las cosas, programarlas y
               mejorarlas. <br />
-              Cursando Quinto año en la orientacion <strong>TIC en ORT</strong>, trabajo en{" "}
+              Estudio <strong>TIC en ORT</strong>, trabajo en{" "}
               <strong>Diaxos</strong> y me preparo para estudiar{" "}
               <strong>Ingeniería Industrial</strong>. <br />
               Si algo me define, es la búsqueda constante de{" "}
@@ -103,7 +115,7 @@ function App() {
           <div className="section-header row-header">
             <h2>Proyectos</h2>
             <span className="muted-small">
-              Trabajos reales de la escuela y prácticas personales
+              Trabajos reales de la escuela, team y prácticas personales
             </span>
           </div>
 
@@ -143,7 +155,7 @@ function App() {
             <div>
               <h3>App mobile de accesibilidad</h3>
               <p>
-                Proyecto pensado para ayudar a las personas que no hablan a hablar y expresarse con libertad!,
+                Proyecto pensado para practicar diseño de interfaces mobile,
                 navegación con Expo Router y accesibilidad. Pantallas:
                 home, login, menú inferior y módulo de práctica.
               </p>
@@ -193,7 +205,7 @@ function App() {
         </section>
 
         {/* CONTACTO */}
-        <section id="contacto" className="section">
+        <section id="contacto" className="section contacto-section">
           <div className="section-header row-header">
             <h2>Contacto</h2>
             <span className="muted-small">
@@ -201,20 +213,55 @@ function App() {
             </span>
           </div>
 
-          <form
-            className="contact-form"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Gracias por escribir 👌");
-            }}
-          >
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Email" required />
-            <textarea rows="4" placeholder="Mensaje..." />
-            <button className="primary" type="submit">
-              Enviar
-            </button>
-          </form>
+          <div className="contact-wrapper">
+            {/* FORM */}
+            <form
+              className="contact-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Gracias por escribir 👌");
+              }}
+            >
+              <input type="text" placeholder="Nombre" required />
+              <input type="email" placeholder="Email" required />
+              <textarea rows="4" placeholder="Mensaje..." />
+              <button className="primary" type="submit">
+                Enviar
+              </button>
+            </form>
+
+            {/* LINKS */}
+            <div className="contact-links">
+              <a
+                href="https://www.linkedin.com/in/tomas-ceferino-grinstein-lavagnino"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card linkedin"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                  alt="LinkedIn"
+                />
+                <div>
+                  <h4>LinkedIn</h4>
+                  <p>Tomás Ceferino Grinstein Lavagnino</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/soluciones-aquila"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card aquila"
+              >
+                <img src={aquilaLogo} alt="Logo Soluciones Áquila" />
+                <div>
+                  <h4>Soluciones Áquila</h4>
+                  <p>Equipo tecnológico · Innovación</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* FOOTER */}
