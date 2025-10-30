@@ -2,12 +2,13 @@
 // Portfolio profesional – Tomás Grinstein
 
 import profilePic from "./assets/profile.png";
+import sImage from "./assets/s.JPG";
 
 const PROJECTS = [
   {
     title: "Sign AI (mobile)",
-    desc: "UI en React Native / Expo para práctica de lenguaje de señas.",
-    stack: ["React Native", "Expo", "Mobile UI"],
+    desc: "Front-End en React Native / Expo para traduccion de lenguaje de señas.",
+    stack: ["React Native", "Expo", "Mobile FE"],
   },
   {
     title: "Gestor de tareas ORT",
@@ -43,19 +44,24 @@ function App() {
         <section className="hero-modern">
           <div className="hero-left">
             <span className="hero-badge">ORT · 5º TIC · 2025</span>
-            <h1>
+
+            <h1 className="hero-title fade-in">
               Hola, soy <span className="grad-text">Tomás Grinstein</span>
             </h1>
 
-            <p className="hero-sub">
-              Soy estudiante de TIC en ORT y me apasiona la tecnología y la innovación. <br />
-              Disfruto programar, aprender cosas nuevas y trabajar en equipo. <br />
-              Actualmente colaboro en tareas administrativas en{" "}
-              <strong>Diaxos</strong>, y mi próximo paso es estudiar{" "}
-              <strong>Ingeniería Industrial</strong> para combinar lo técnico con lo humano.
+            <p className="hero-sub fade-in-delayed">
+              Un curioso incansable que combina <strong>lógica</strong> y{" "}
+              <strong>creatividad</strong>. <br />
+              Me apasiona entender cómo funcionan las cosas, programarlas y
+              mejorarlas. <br />
+              Cursando Quinto año en la orientacion <strong>TIC en ORT</strong>, trabajo en{" "}
+              <strong>Diaxos</strong> y me preparo para estudiar{" "}
+              <strong>Ingeniería Industrial</strong>. <br />
+              Si algo me define, es la búsqueda constante de{" "}
+              <strong>aprender</strong> y <strong>crear con propósito</strong>.
             </p>
 
-            <div className="hero-actions">
+            <div className="hero-actions fade-in-delayed">
               <a className="primary big" href="#proyectos">
                 Ver mis proyectos
               </a>
@@ -64,11 +70,11 @@ function App() {
               </a>
             </div>
 
-            <div className="hero-tags">
+            <div className="hero-tags fade-in-delayed">
               <span>React / Vite</span>
               <span>React Native</span>
-              <span>Trabajo en equipo</span>
               <span>Innovación</span>
+              <span>Trabajo en equipo</span>
             </div>
           </div>
 
@@ -93,27 +99,32 @@ function App() {
         </section>
 
         {/* PROYECTOS */}
-        <section id="proyectos" className="section">
+        <section id="proyectos" className="section projects-section">
           <div className="section-header row-header">
             <h2>Proyectos</h2>
             <span className="muted-small">
-              Algunos proyectos escolares y personales
+              Trabajos reales de la escuela y prácticas personales
             </span>
           </div>
 
-          <div className="grid projects-pro">
+          <div className="projects-grid">
             {PROJECTS.map((proj) => (
-              <article key={proj.title} className="card card-pro">
-                <h3>{proj.title}</h3>
-                <p>{proj.desc}</p>
-                <div className="tags">
-                  {proj.stack.map((tag) => (
-                    <span key={tag} className="tag">
-                      {tag}
-                    </span>
-                  ))}
+              <article key={proj.title} className="project-card">
+                <div className="project-top">
+                  <span className="project-pill">Proyecto</span>
+                  <h3>{proj.title}</h3>
+                  <p>{proj.desc}</p>
                 </div>
-                <button className="linkbtn">Ver →</button>
+                <div className="project-bottom">
+                  <div className="project-tags">
+                    {proj.stack.map((tag) => (
+                      <span key={tag} className="project-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <button className="project-btn">Ver →</button>
+                </div>
               </article>
             ))}
           </div>
@@ -132,7 +143,7 @@ function App() {
             <div>
               <h3>App mobile de accesibilidad</h3>
               <p>
-                Proyecto pensado para practicar diseño de interfaces mobile,
+                Proyecto pensado para ayudar a las personas que no hablan a hablar y expresarse con libertad!,
                 navegación con Expo Router y accesibilidad. Pantallas:
                 home, login, menú inferior y módulo de práctica.
               </p>
@@ -140,7 +151,7 @@ function App() {
               <ul className="signai-list">
                 <li>⚡ React Native + Expo</li>
                 <li>📱 Diseño limpio y moderno</li>
-                <li>🧩 Pensado para colegio / portfolio</li>
+                <li>🧩 Proyecto escolar destacado</li>
               </ul>
 
               <div className="hero-actions">
@@ -166,6 +177,18 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Imagen grande del proyecto */}
+          <div className="signai-image-container">
+            <img
+              src={sImage}
+              alt="Captura del proyecto Sign AI"
+              className="signai-image"
+            />
+            <p className="signai-caption">
+              Interfaz principal del proyecto Sign AI · React Native / Expo
+            </p>
           </div>
         </section>
 
