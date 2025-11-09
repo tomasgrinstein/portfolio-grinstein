@@ -233,3 +233,311 @@ h1 {
     align-items: flex-start;
   }
 }
+.pill-ort {
+  background: rgba(125, 211, 252, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.5);
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tl-item {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.09);
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+}
+
+.tl-item h3 {
+  margin-bottom: 0.25rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chip {
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  color: #e2e8f0;
+}
+.hero-short {
+  gap: 0.6rem;
+}
+
+.lead.small {
+  max-width: 34rem;
+  font-size: 0.9rem;
+}
+
+.row-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.muted-small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.card-tight {
+  gap: 0.4rem;
+  min-height: 160px;
+}
+
+/* SIGN AI */
+.signai {
+  margin-top: 2.5rem;
+}
+
+.signai-box {
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.1rem;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 1.4fr 0.6fr;
+}
+
+.signai-list {
+  list-style: none;
+  margin: 0.8rem 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.signai-card {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15), rgba(2, 6, 23, 0));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-self: center;
+}
+
+.signai-title {
+  font-weight: 600;
+}
+
+.signai-sub {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.signai-chip {
+  margin-top: 0.5rem;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  width: fit-content;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 850px) {
+  .signai-box {
+    grid-template-columns: 1fr;
+  }
+}
+/* HERO NUEVO */
+.hero-modern {
+  display: grid;
+  grid-template-columns: 1.05fr 0.65fr;
+  gap: 1.8rem;
+  align-items: center;
+  margin-top: 1.4rem;
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.22) 0%, rgba(2, 6, 23, 0) 46%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.25), rgba(2, 6, 23, 0));
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 1.4rem;
+  padding: 1.5rem 1.3rem 1.6rem;
+}
+
+.hero-left h1 {
+  font-size: clamp(2.4rem, 4vw, 3.1rem);
+  line-height: 1;
+}
+
+.hero-badge,
+.hero-left .hero-badge {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+.grad-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 40%, #f97316 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-sub {
+  color: var(--muted);
+  max-width: 34rem;
+  margin-top: 0.6rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-tags span {
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.hero-right {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.photo-card {
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.6), rgba(2, 6, 23, 0));
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 1.1rem;
+  padding: 0.7rem;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 0.9rem;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+
+.photo-label {
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 0.7rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.photo-name {
+  font-weight: 600;
+}
+
+.photo-role {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.hero-floating {
+  position: absolute;
+  bottom: 0.3rem;
+  right: -1rem;
+  background: rgba(3, 105, 161, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.8rem;
+  padding: 0.5rem 0.7rem;
+  backdrop-filter: blur(8px);
+}
+
+.hf-title {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.hf-sub {
+  font-size: 0.65rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+/* PROYECTOS MÁS PRO */
+.projects-pro {
+  gap: 1.2rem;
+}
+
+.card-pro {
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.2), rgba(2, 6, 23, 0.2));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.card-pro:hover {
+  transform: translateY(-3px);
+  border: 1px solid rgba(56, 189, 248, 0.7);
+}
+
+/* SIGN AI MÁS COLOR */
+.signai-box.colorful {
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.25) 0%, rgba(2, 6, 23, 0.1) 60%),
+    rgba(15, 23, 42, 0.1);
+}
+
+.signai-card.big {
+  min-height: 210px;
+}
+
+.signai-phone {
+  margin-top: 0.7rem;
+  background: rgba(2, 6, 23, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1.1rem;
+  width: 140px;
+  aspect-ratio: 9/16;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.screen-top {
+  height: 8px;
+  background: rgba(226, 232, 240, 0.4);
+  border-radius: 999px;
+  width: 55px;
+  align-self: center;
+}
+
+.screen-body {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.5), rgba(2, 6, 23, 0.5));
+  border-radius: 0.8rem;
+  padding: 0.45rem;
+  flex: 1;
+}
+
+.phone-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.phone-sub {
+  font-size: 0.6rem;
+  color: rgba(226, 232, 240, 0.8);
+}
+
+@media (max-width: 950px) {
+  .hero-modern {
+    grid-template-columns: 1fr;
+  }
+  .hero-right {
+    justify-content: flex-start;
+  }
+}
