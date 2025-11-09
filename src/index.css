@@ -802,3 +802,165 @@ h1 {
   }
 }
 >>>>>>> 7e6746af76b95265d775ee4c096fcdfe0b704d87
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 340px);
+  gap: 2rem;
+  align-items: start;
+}
+
+.socials-panel {
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.socials-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #ff7a00;
+  color: #fff;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+  opacity: 0.85;
+}
+
+.social-btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+
+@media (max-width: 920px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* --- Contacto + Redes (matching dark theme) --- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 300px);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.socials-panel {
+  /* MISMO look que las cards/inputs del form */
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: var(--radius);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+.socials-mini .mini-title {
+  margin: 0 0 .25rem;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.socials-list {
+  display: grid;
+  gap: .55rem;
+  margin-top: .35rem;
+}
+
+.social-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .6rem;
+  border-radius: .6rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: .86rem;
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.social-item:hover {
+  background: rgba(2, 6, 23, 0.5);
+  border-color: rgba(56, 189, 248, 0.6);
+  transform: translateY(-1px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  display: inline-block;
+  opacity: .9;
+}
+.dot-ln  { background: var(--accent); }          /* azul */
+.dot-link{ background: rgba(99, 102, 241, 0.95);} /* violeta suave */
+
+.arrow {
+  margin-left: auto;
+  opacity: .85;
+  font-size: .9em;
+  color: var(--muted);
+}
+
+/* Mobile: se apilan y la tarjeta de redes queda chica */
+@media (max-width: 920px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .socials-panel  { padding: .9rem; }
+  .social-item    { font-size: .85rem; }
+}
+/* --- Redes (Sign AI naranja / LinkedIn azul) --- */
+.is-ln:hover {
+  border-color: rgba(56, 189, 248, 0.8);     /* LinkedIn azul */
+  box-shadow: 0 0 0 1px rgba(56,189,248,0.25) inset;
+  background: rgba(2, 132, 199, 0.25);
+}
+
+.is-signin:hover {
+  border-color: rgba(249, 115, 22, 0.8);     /* Sign AI naranja */
+  box-shadow: 0 0 0 1px rgba(249,115,22,0.25) inset;
+  background: rgba(120, 53, 15, 0.35);
+}
+/* Redes con puntos de color */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-ln {
+  background: #38bdf8; /* azul LinkedIn */
+}
+
+.dot-signin {
+  background: #f97316; /* naranja Sign AI */
+}
+
+/* Hover con colores acordes */
+.is-ln:hover {
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 0 1px rgba(56,189,248,0.25) inset;
+  background: rgba(2, 132, 199, 0.25);
+}
+
+.is-signin:hover {
+  border-color: rgba(249, 115, 22, 0.8);
+  box-shadow: 0 0 0 1px rgba(249,115,22,0.25) inset;
+  background: rgba(120, 53, 15, 0.35);
+}
